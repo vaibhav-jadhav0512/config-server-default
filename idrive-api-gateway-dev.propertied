@@ -1,0 +1,10 @@
+server.port=8080
+#eureka.instance.instance-id=${spring.application.name}:${random.uuid}
+spring.application.name=API-GATEWAY
+spring.cloud.gateway.discovery.locator.enabled=true
+spring.cloud.gateway.routes[0].id=NEW-IDRIVE-GET-SERVICE
+spring.cloud.gateway.routes[0].uri=http://192.168.2.194:9001/
+spring.cloud.gateway.routes[0].predicates[0]=Path=/idrive/get/**
+spring.cloud.gateway.routes[1].id=NEW-IDRIVE-POST-SERVICE
+spring.cloud.gateway.routes[1].uri=http://192.168.2.194:9002/
+spring.cloud.gateway.routes[1].predicates[0]=Path=/idrive/post/**
