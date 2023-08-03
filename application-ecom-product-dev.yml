@@ -6,8 +6,6 @@ spring:
     username: root
     password: root
     driver-class-name: com.mysql.cj.jdbc.Driver
-  application:
-    name: PRODUCT-SERVICE
 eureka:
   instance:
     prefer-ip-address: true
